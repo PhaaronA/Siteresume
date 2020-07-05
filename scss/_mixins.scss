@@ -1,0 +1,49 @@
+@mixin block-size {
+    height: 100vh;
+    padding: 0px calc(50vw - 555px);
+}
+@mixin properties-background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+@mixin JosefinSans {
+    font-family: "JosefinSans";
+    color: white;
+}
+@mixin aleoregular {
+    font-family: "aleo-regular";
+    color: white;
+}
+@mixin text-button {
+    font-weight: "aleoregular";
+    font-size: 16px;
+    color: white;
+    
+}
+@mixin button {
+    width: 225px;
+    height: 60px;
+    background-color: #5474fd;
+    position: relative;
+    cursor: pointer;
+    @include text-button;
+    outline: none;
+    .content__button-text{
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+        transition: 0.3s;
+    }
+    .content__button-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1;
+    }
+}
